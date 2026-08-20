@@ -23,6 +23,25 @@
     background: white;
     color: black;
   }
+
+  #printable-balance-sheet-area, #printable-balance-sheet-area * {
+    visibility: visible;
+  }
+  #printable-balance-sheet-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    background: white;
+    color: black;
+  }
+
+  @page {
+    margin: 10mm;
+    size: auto;
+  }
 }
 
 /* Custom scrollbar for horizontal day sheet */

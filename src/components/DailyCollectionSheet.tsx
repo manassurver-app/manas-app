@@ -26,6 +26,7 @@ import {
   formatBSToNepaliDate,
 } from '../utils/nepaliCalendar';
 import { exportDailyCollectionSheetToExcel, exportMonthlyCollectionMatrixToExcel } from '../utils/excel';
+import { transformToMonthlyMatrix, exportMatrixToExcel } from '../utils/excelExportUtils';
 
 interface DailyCollectionSheetProps {
   accounts: Account[];
@@ -142,7 +143,14 @@ export const DailyCollectionSheet: React.FC<DailyCollectionSheetProps> = ({
   };
 
   const handleExportMonthlyMatrixExcel = () => {
-    exportMonthlyCollectionMatrixToExcel(accessibleAccounts, transactions, monthYearStr, agent.full_name);
+    const result = transformToMonthlyMatrix(
+      accessibleAccounts,
+      transactions,
+      agent,
+      selectedMonth,
+      selectedYear
+    );
+    exportMatrixToExcel(result);
   };
 
   return (

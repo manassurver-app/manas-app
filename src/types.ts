@@ -8,6 +8,7 @@ export interface Profile {
   phone_number?: string;
   assigned_area?: string; // e.g. "Tikapur-1 Ward B & Bazaar"
   created_at: string;
+  is_active?: boolean;
 }
 
 export type AccountStatus = 'active' | 'closed';
@@ -24,6 +25,8 @@ export interface Account {
   current_balance: number;
   status: AccountStatus;
   created_at: string;
+  closed_at?: string;
+  closure_reason?: string;
   member_photo_url?: string;
 }
 
