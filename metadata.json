@@ -1,0 +1,6 @@
+{
+  "name": "Manas Krishi Sahakari - Field Collection",
+  "description": "Mobile-first cooperative micro-savings and field collection system for Manas Krishi Sahakari Limited, Tikapur-1, Kailali, featuring offline-first collection, Nepali BS calendar, and Supabase database schema.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
